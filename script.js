@@ -1,35 +1,52 @@
 //Cursos
 /*
-const titulo; //string
-const autor; //string
-const preco; //number
-const horas; //number
-const possuiSelo; //boolean
-const topicos; //array (object)
+titulo //string
+autor //string
+preco //number
+horas //number
+possuiSelo //boolean
+topicos //array (object)
 */
 
-const titulo1 = "Aprenda inglês do zero";
-const autor1 = "Maria das Neves";
-const preco1 = 150;
-const horas1 = 50;
-const possuiSelo1 = true;
-const topicos1 = ["Inglês"];
+const objeto1 = {
+  titulo: "Aprenda inglês do zero",
+  autor: "Maria das Neves",
+  preco: 150,
+  horas: 50,
+  possuiSelo: true,
+  topicos: ["Inglês"],
+};
 
-const titulo2 = "React com 3 projetos para o seu portfólio";
-const autor2 = "Gabriela da Silva";
-const preco2 = 200;
-const horas2 = 15;
-const possuiSelo2 = false;
-const topicos2 = ["Javascript", "HTML", "CSS", "React"];
+const objeto2 = {
+  titulo: "React com 3 projetos para o seu portfólio",
+  autor: "Gabriela da Silva",
+  preco: 200,
+  horas: 15,
+  possuiSelo: false,
+  topicos: ["Javascript", "HTML", "CSS", "React"],
+};
 
-const titulo3 = "Como ganhar dinheiro com Marketing Digital";
-const autor3 = "Ana Ferreira";
-const preco3 = 50;
-const horas3 = 10;
-const possuiSelo3 = true;
-const topicos3 = ["Marketing Digital", "Redes Sociais"];
+const objeto3 = {
+  titulo: "Como ganhar dinheiro com Marketing Digital",
+  autor: "Ana Ferreira",
+  preco: 50,
+  horas: 10,
+  possuiSelo: true,
+  topicos: ["Marketing Digital", "Redes Sociais"],
+};
 
-const mediaPrecos = (preco1 + preco2 + preco3)/3;
+let objetosTeste = [objeto1, objeto2, objeto3];
+let objetos = [];
+for (let objeto in objetosTeste) {
+  if (objeto.possuiSelo) {
+    objetos.push(objeto);
+  } else {
+    alert(`O curso ${objeto.titulo} não foi adicionado!`);
+  }
+}
+
+/*
+const mediaPrecos = (preco1 + preco2 + preco3) / 3;
 console.log(mediaPrecos);
 
 const possuiSelos = possuiSelo1 && possuiSelo2 && possuiSelo3;
@@ -59,3 +76,4 @@ console.log("preco: ", preco3);
 console.log("horas: ", horas3);
 console.log("possuiSelo: ", possuiSelo3);
 console.log("topicos: ", topicos3);
+*/
