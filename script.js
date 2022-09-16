@@ -1,12 +1,10 @@
-//Cursos
-/*
-titulo //string
-autor //string
-preco //number
-horas //number
-possuiSelo //boolean
-topicos //array (object)
-*/
+// CURSOS
+// titulo --> string
+// autor --> string
+// preco --> number
+// horas --> number
+// possuiSelo --> boolean
+// topicos --> array (object)
 
 const objeto1 = {
   titulo: "Aprenda inglês do zero",
@@ -35,17 +33,109 @@ const objeto3 = {
   topicos: ["Marketing Digital", "Redes Sociais"],
 };
 
-let objetosTeste = [objeto1, objeto2, objeto3];
-let objetos = [];
-for (let objeto in objetosTeste) {
-  if (objeto.possuiSelo) {
-    objetos.push(objeto);
-  } else {
-    alert(`O curso ${objeto.titulo} não foi adicionado!`);
+//Relatorio, antes
+const printPrevReport = () => {
+  console.log("ANTES");
+
+  console.log("---OBJETO 1---");
+  console.log("titulo:", objeto1["titulo"]);
+  console.log("autor:", objeto1["autor"]);
+  console.log("preco:", objeto1["preco"]);
+  console.log("horas:", objeto1["horas"]);
+  console.log("possuiSelo:", objeto1["possuiSelo"]);
+  console.log("topicos:", objeto1["topicos"]);
+
+  console.log("---OBJETO 2---");
+  console.log("titulo:", objeto2["titulo"]);
+  console.log("autor:", objeto2["autor"]);
+  console.log("preco:", objeto2["preco"]);
+  console.log("horas:", objeto2["horas"]);
+  console.log("possuiSelo:", objeto2["possuiSelo"]);
+  console.log("topicos:", objeto2["topicos"]);
+
+  console.log("---OBJETO 3---");
+  console.log("titulo:", objeto3["titulo"]);
+  console.log("autor:", objeto3["autor"]);
+  console.log("preco:", objeto3["preco"]);
+  console.log("horas:", objeto3["horas"]);
+  console.log("possuiSelo:", objeto3["possuiSelo"]);
+  console.log("topicos:", objeto3["topicos"]);
+};
+//printPrevReport();
+
+//Funcao que transforma o array do objeto em string
+function arrValueToStr(obj, key) {
+  let arrValue = obj[key];
+  let strValue = "";
+  for (let element of arrValue) {
+    strValue += `${element},`;
+  }
+  return strValue.slice(0, -1);
+}
+
+//Relatorio, depois
+const printPostReport = () => {
+  console.log("DEPOIS");
+
+  console.log("---OBJETO 1---");
+  console.log("titulo:", objeto1["titulo"]);
+  console.log("autor:", objeto1["autor"]);
+  console.log("preco:", objeto1["preco"]);
+  console.log("horas:", objeto1["horas"]);
+  console.log("possuiSelo:", objeto1["possuiSelo"]);
+  console.log("topicos:", arrValueToStr(objeto1, "topicos"));
+
+  console.log("---OBJETO 2---");
+  console.log("titulo:", objeto2["titulo"]);
+  console.log("autor:", objeto2["autor"]);
+  console.log("preco:", objeto2["preco"]);
+  console.log("horas:", objeto2["horas"]);
+  console.log("possuiSelo:", objeto2["possuiSelo"]);
+  console.log("topicos:", arrValueToStr(objeto2, "topicos"));
+
+  console.log("---OBJETO 3---");
+  console.log("titulo:", objeto3["titulo"]);
+  console.log("autor:", objeto3["autor"]);
+  console.log("preco:", objeto3["preco"]);
+  console.log("horas:", objeto3["horas"]);
+  console.log("possuiSelo:", objeto3["possuiSelo"]);
+  console.log("topicos:", arrValueToStr(objeto3, "topicos"));
+};
+//printPostReport();
+
+//Usando laco para imprimir o relatorio
+function printItem(obj, label) {
+  console.log(label);
+  for (let i in obj) {
+    console.log(i + ":", obj[i]);
   }
 }
 
+const printItems = () => {
+  printItem(objeto1, "---OBJETO 1---");
+  printItem(objeto2, "---OBJETO 2---");
+  printItem(objeto3, "---OBJETO 3---");
+};
+//printItems();
+
+//Relatorio com todos os valores do objeto convertidos para string
+function valuesToStr(obj) {
+  let text = "";
+  for (let i in obj) {
+    text += `${i}: ${obj[i]}\n`;
+  }
+  return text;
+}
+
+const printObjsToStr = () => {
+  console.log(valuesToStr(objeto1));
+  console.log(valuesToStr(objeto2));
+  console.log(valuesToStr(objeto3));
+};
+//printObjsToStr();
+
 /*
+-SEMANA 1-------
 const mediaPrecos = (preco1 + preco2 + preco3) / 3;
 console.log(mediaPrecos);
 
@@ -76,4 +166,17 @@ console.log("preco: ", preco3);
 console.log("horas: ", horas3);
 console.log("possuiSelo: ", possuiSelo3);
 console.log("topicos: ", topicos3);
+*/
+
+/* 
+-SEMANA 2-------
+let objetosTeste = [objeto1, objeto2, objeto3];
+let objetos = [];
+for (let objeto in objetosTeste) {
+  if (objeto.possuiSelo) {
+    objetos.push(objeto);
+  } else {
+    alert(`O curso ${objeto.titulo} não foi adicionado!`);
+  }
+}
 */
