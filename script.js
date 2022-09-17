@@ -134,17 +134,22 @@ const printObjsToStr = () => {
 };
 //printObjsToStr();
 
-function hasKey(obj, key) {
-  let filteredObj = {};
-  if (obj.hasOwnProperty(key)) {
-    filteredObj[key] = obj[key];
-    return filteredObj;
-  } else {
-    alert("Nenhum item foi encontrado!");
+function hasKey(array, key) {
+  let filteredObj;
+  let filteredArr = [];
+  for (let obj of array) {
+    filteredObj = {};
+    if (obj.hasOwnProperty(key)) {
+      filteredObj[key] = obj[key];
+      filteredArr.push(filteredObj);
+    } else {
+      alert("Nenhum item foi encontrado!");
+    }
   }
+  return filteredArr;
 }
-//console.log(hasKey(objeto1, "a"));
-//console.log(hasKey(objeto1, "horas"));
+
+//console.log(hasKey([objeto1, objeto2, objeto3], "horas"));
 
 /*
 -SEMANA 1-------
