@@ -134,6 +134,18 @@ const printObjsToStr = () => {
 };
 //printObjsToStr();
 
+function hasKey(obj, key) {
+  let filteredObj = {};
+  if (obj.hasOwnProperty(key)) {
+    filteredObj[key] = obj[key];
+    return filteredObj;
+  } else {
+    alert("Nenhum item foi encontrado!");
+  }
+}
+//console.log(hasKey(objeto1, "a"));
+//console.log(hasKey(objeto1, "horas"));
+
 /*
 -SEMANA 1-------
 const mediaPrecos = (preco1 + preco2 + preco3) / 3;
