@@ -1,3 +1,9 @@
+/*
+=======SEMANA 1=========
+*/
+
+//----1.1----
+
 // CURSOS
 // titulo --> string
 // autor --> string
@@ -6,61 +12,150 @@
 // possuiSelo --> boolean
 // topicos --> array (object)
 
+//----1.2----
+
+const titulo1 = "Aprenda inglês do zero";
+const autor1 = "Maria das Neves";
+const preco1 = 150;
+const horas1 = 50;
+const possuiSelo1 = true;
+const topicos1 = ["Inglês"];
+
+const titulo2 = "React com 3 projetos para o seu portfólio";
+const autor2 = "Gabriela da Silva";
+const preco2 = 200;
+const horas2 = 15;
+const possuiSelo2 = false;
+const topicos2 = ["Javascript", "HTML", "CSS", "React"];
+
+const titulo3 = "Como ganhar dinheiro com Marketing Digital";
+const autor3 = "Ana Ferreira";
+const preco3 = 50;
+const horas3 = 10;
+const possuiSelo3 = true;
+const topicos3 = ["Marketing Digital", "Redes Sociais"];
+
+//----1.3----
+
+const mediaPrecos = (preco1 + preco2 + preco3) / 3;
+console.log("Média de preços", mediaPrecos);
+
+//----1.4----
+
+const possuiSelos = possuiSelo1 && possuiSelo2 && possuiSelo3;
+console.log("Todos possuem selos?", possuiSelos);
+
+//----1.5----
+
+// Já havia feito essa etapa!
+
+//----1.6----
+
+const printAll = () => {
+  console.log("titulo: ", titulo1.toUpperCase());
+  console.log("autor: ", autor1.toUpperCase());
+  console.log("preco: ", preco1);
+  console.log("horas: ", horas1);
+  console.log("possuiSelo: ", possuiSelo1);
+  console.log("topicos: ", topicos1);
+
+  console.log("=================");
+
+  console.log("titulo: ", titulo2.toUpperCase());
+  console.log("autor: ", autor2.toUpperCase());
+  console.log("preco: ", preco2);
+  console.log("horas: ", horas2);
+  console.log("possuiSelo: ", possuiSelo2);
+  console.log("topicos: ", topicos2);
+
+  console.log("=================");
+
+  console.log("titulo: ", titulo3.toUpperCase());
+  console.log("autor: ", autor3.toUpperCase());
+  console.log("preco: ", preco3);
+  console.log("horas: ", horas3);
+  console.log("possuiSelo: ", possuiSelo3);
+  console.log("topicos: ", topicos3);
+};
+
+//printAll();
+
+/*
+=======SEMANA 2=========
+*/
+
+//----2.1----
+
 const objeto1 = {
-  titulo: "Aprenda inglês do zero",
-  autor: "Maria das Neves",
-  preco: 150,
-  horas: 50,
-  possuiSelo: true,
-  topicos: ["Inglês"],
+  titulo: titulo1,
+  autor: autor1,
+  preco: preco1,
+  horas: horas1,
+  possuiSelo: possuiSelo1,
+  topicos: topicos1,
 };
 
 const objeto2 = {
-  titulo: "React com 3 projetos para o seu portfólio",
-  autor: "Gabriela da Silva",
-  preco: 200,
-  horas: 15,
-  possuiSelo: false,
-  topicos: ["Javascript", "HTML", "CSS", "React"],
+  titulo: titulo2,
+  autor: autor2,
+  preco: preco2,
+  horas: horas2,
+  possuiSelo: possuiSelo2,
+  topicos: topicos2,
 };
 
 const objeto3 = {
-  titulo: "Como ganhar dinheiro com Marketing Digital",
-  autor: "Ana Ferreira",
-  preco: 50,
-  horas: 10,
-  possuiSelo: true,
-  topicos: ["Marketing Digital", "Redes Sociais"],
+  titulo: titulo3,
+  autor: autor3,
+  preco: preco3,
+  horas: horas3,
+  possuiSelo: possuiSelo3,
+  topicos: topicos3,
 };
+
+//----2.2----
+
+let objetos = [];
+
+//----2.3---- + ----2.4---- + ----2.5----
+
+let objetosTeste = [objeto1, objeto2, objeto3];
+
+for (let objeto of objetosTeste) {
+  if (objeto.possuiSelo) {
+    objetos.push(objeto);
+  } else {
+    alert(`O curso ${objeto.titulo} não foi adicionado!`);
+  }
+}
+
+/*
+=======SEMANA 3=========
+*/
+
+//----3.1----
 
 //Relatorio, antes
 const printPrevReport = () => {
   console.log("ANTES");
 
   console.log("---OBJETO 1---");
-  console.log("titulo:", objeto1["titulo"]);
-  console.log("autor:", objeto1["autor"]);
-  console.log("preco:", objeto1["preco"]);
-  console.log("horas:", objeto1["horas"]);
-  console.log("possuiSelo:", objeto1["possuiSelo"]);
-  console.log("topicos:", objeto1["topicos"]);
+  console.log("titulo:", objetos[0]["titulo"]);
+  console.log("autor:", objetos[0]["autor"]);
+  console.log("preco:", objetos[0]["preco"]);
+  console.log("horas:", objetos[0]["horas"]);
+  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
+  console.log("topicos:", objetos[0]["topicos"]);
 
   console.log("---OBJETO 2---");
-  console.log("titulo:", objeto2["titulo"]);
-  console.log("autor:", objeto2["autor"]);
-  console.log("preco:", objeto2["preco"]);
-  console.log("horas:", objeto2["horas"]);
-  console.log("possuiSelo:", objeto2["possuiSelo"]);
-  console.log("topicos:", objeto2["topicos"]);
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objeto3["titulo"]);
-  console.log("autor:", objeto3["autor"]);
-  console.log("preco:", objeto3["preco"]);
-  console.log("horas:", objeto3["horas"]);
-  console.log("possuiSelo:", objeto3["possuiSelo"]);
-  console.log("topicos:", objeto3["topicos"]);
+  console.log("titulo:", objetos[1]["titulo"]);
+  console.log("autor:", objetos[1]["autor"]);
+  console.log("preco:", objetos[1]["preco"]);
+  console.log("horas:", objetos[1]["horas"]);
+  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
+  console.log("topicos:", objetos[1]["topicos"]);
 };
+
 //printPrevReport();
 
 //Funcao que transforma o array do objeto em string
@@ -78,45 +173,43 @@ const printPostReport = () => {
   console.log("DEPOIS");
 
   console.log("---OBJETO 1---");
-  console.log("titulo:", objeto1["titulo"]);
-  console.log("autor:", objeto1["autor"]);
-  console.log("preco:", objeto1["preco"]);
-  console.log("horas:", objeto1["horas"]);
-  console.log("possuiSelo:", objeto1["possuiSelo"]);
-  console.log("topicos:", arrValueToStr(objeto1, "topicos"));
+  console.log("titulo:", objetos[0]["titulo"]);
+  console.log("autor:", objetos[0]["autor"]);
+  console.log("preco:", objetos[0]["preco"]);
+  console.log("horas:", objetos[0]["horas"]);
+  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
+  console.log("topicos:", objetos[0]["topicos"]);
 
   console.log("---OBJETO 2---");
-  console.log("titulo:", objeto2["titulo"]);
-  console.log("autor:", objeto2["autor"]);
-  console.log("preco:", objeto2["preco"]);
-  console.log("horas:", objeto2["horas"]);
-  console.log("possuiSelo:", objeto2["possuiSelo"]);
-  console.log("topicos:", arrValueToStr(objeto2, "topicos"));
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objeto3["titulo"]);
-  console.log("autor:", objeto3["autor"]);
-  console.log("preco:", objeto3["preco"]);
-  console.log("horas:", objeto3["horas"]);
-  console.log("possuiSelo:", objeto3["possuiSelo"]);
-  console.log("topicos:", arrValueToStr(objeto3, "topicos"));
+  console.log("titulo:", objetos[1]["titulo"]);
+  console.log("autor:", objetos[1]["autor"]);
+  console.log("preco:", objetos[1]["preco"]);
+  console.log("horas:", objetos[1]["horas"]);
+  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
+  console.log("topicos:", objetos[1]["topicos"]);
 };
+
 //printPostReport();
 
+//----3.2----
+
 //Usando laco para imprimir o relatorio
-function printItem(obj, label) {
-  console.log(label);
-  for (let i in obj) {
-    console.log(i + ":", obj[i]);
+function printWithLoops(arr) {
+  for (let obj of arr) {
+    for (let key in obj) {
+      console.log(key + ":", obj[key]);
+    }
+    console.log("------");
   }
 }
 
 const printItems = () => {
-  printItem(objeto1, "---OBJETO 1---");
-  printItem(objeto2, "---OBJETO 2---");
-  printItem(objeto3, "---OBJETO 3---");
+  printWithLoops(objetos);
 };
+
 //printItems();
+
+//----3.3----
 
 //Relatorio com todos os valores do objeto convertidos para string
 function valuesToStr(obj) {
@@ -128,72 +221,24 @@ function valuesToStr(obj) {
 }
 
 const printObjsToStr = () => {
-  console.log(valuesToStr(objeto1));
-  console.log(valuesToStr(objeto2));
-  console.log(valuesToStr(objeto3));
+  console.log(valuesToStr(objetos[0]));
+  console.log(valuesToStr(objetos[1]));
 };
+
 //printObjsToStr();
 
-function hasKey(array, key) {
-  let filteredObj;
-  let filteredArr = [];
+//----3.4----
+
+//Verificando se algum dos objetos tem uma determinda string
+function objHasString(array, string) {
   for (let obj of array) {
-    filteredObj = {};
-    if (obj.hasOwnProperty(key)) {
-      filteredObj[key] = obj[key];
-      filteredArr.push(filteredObj);
-    } else {
-      alert("Nenhum item foi encontrado!");
+    for (let key in obj) {
+      if (obj[key] === string) {
+        return obj;
+      }
     }
   }
-  return filteredArr;
+  return alert("Nenhum item foi encontrado!");
 }
 
-//console.log(hasKey([objeto1, objeto2, objeto3], "horas"));
-
-/*
--SEMANA 1-------
-const mediaPrecos = (preco1 + preco2 + preco3) / 3;
-console.log(mediaPrecos);
-
-const possuiSelos = possuiSelo1 && possuiSelo2 && possuiSelo3;
-console.log(possuiSelos);
-
-console.log("titulo: ", titulo1.toUpperCase());
-console.log("autor: ", autor1.toUpperCase());
-console.log("preco: ", preco1);
-console.log("horas: ", horas1);
-console.log("possuiSelo: ", possuiSelo1);
-console.log("topicos: ", topicos1);
-
-console.log("=================");
-
-console.log("titulo: ", titulo2.toUpperCase());
-console.log("autor: ", autor2.toUpperCase());
-console.log("preco: ", preco2);
-console.log("horas: ", horas2);
-console.log("possuiSelo: ", possuiSelo2);
-console.log("topicos: ", topicos2);
-
-console.log("=================");
-
-console.log("titulo: ", titulo3.toUpperCase());
-console.log("autor: ", autor3.toUpperCase());
-console.log("preco: ", preco3);
-console.log("horas: ", horas3);
-console.log("possuiSelo: ", possuiSelo3);
-console.log("topicos: ", topicos3);
-*/
-
-/* 
--SEMANA 2-------
-let objetosTeste = [objeto1, objeto2, objeto3];
-let objetos = [];
-for (let objeto in objetosTeste) {
-  if (objeto.possuiSelo) {
-    objetos.push(objeto);
-  } else {
-    alert(`O curso ${objeto.titulo} não foi adicionado!`);
-  }
-}
-*/
+//console.log(objHasString(objetos, "Ana Ferreira"));
