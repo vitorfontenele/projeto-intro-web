@@ -137,7 +137,7 @@ for (let objeto of objetosTeste) {
 
 //Relatorio, antes
 const printPrevReport = () => {
-  console.log("ANTES");
+  console.log("------ANTES-------");
 
   console.log("---OBJETO 1---");
   console.log("titulo:", objetos[0]["titulo"]);
@@ -156,7 +156,7 @@ const printPrevReport = () => {
   console.log("topicos:", objetos[1]["topicos"]);
 };
 
-//printPrevReport();
+// printPrevReport();
 
 //Funcao que transforma o array do objeto em string
 function arrValueToStr(obj, key) {
@@ -170,7 +170,7 @@ function arrValueToStr(obj, key) {
 
 //Relatorio, depois
 const printPostReport = () => {
-  console.log("DEPOIS");
+  console.log("--------DEPOIS---------");
 
   console.log("---OBJETO 1---");
   console.log("titulo:", objetos[0]["titulo"]);
@@ -178,7 +178,7 @@ const printPostReport = () => {
   console.log("preco:", objetos[0]["preco"]);
   console.log("horas:", objetos[0]["horas"]);
   console.log("possuiSelo:", objetos[0]["possuiSelo"]);
-  console.log("topicos:", objetos[0]["topicos"]);
+  console.log("topicos:", arrValueToStr(objetos[0], "topicos"));
 
   console.log("---OBJETO 2---");
   console.log("titulo:", objetos[1]["titulo"]);
@@ -186,7 +186,7 @@ const printPostReport = () => {
   console.log("preco:", objetos[1]["preco"]);
   console.log("horas:", objetos[1]["horas"]);
   console.log("possuiSelo:", objetos[1]["possuiSelo"]);
-  console.log("topicos:", objetos[1]["topicos"]);
+  console.log("topicos:", arrValueToStr(objetos[1], "topicos"));
 };
 
 //printPostReport();
@@ -214,8 +214,8 @@ const printItems = () => {
 //Relatorio com todos os valores do objeto convertidos para string
 function valuesToStr(obj) {
   let text = "";
-  for (let i in obj) {
-    text += `${i}: ${obj[i]}\n`;
+  for (let key in obj) {
+    text = text + `${key}: ${obj[key]}\n`;
   }
   return text;
 }
@@ -238,7 +238,7 @@ function objHasString(array, string) {
       }
     }
   }
-  return alert("Nenhum item foi encontrado!");
+  alert("Nenhum item foi encontrado!");
 }
 
 //console.log(objHasString(objetos, "Ana Ferreira"));
