@@ -13,7 +13,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 1fr 1440px 1fr;
-    grid-template-rows: 60px 818px 1fr 315px;
+    grid-template-rows: 60px auto auto 315px;
 }
 
 .sub-container{
@@ -71,13 +71,13 @@ header{
     grid-column: 2 / 3;
     background: linear-gradient(rgba(30, 53, 84, 0.74), rgba(30, 53, 84, 0.74)), url("./assets/europa-universalis-iv-1.png");
     background-size: cover;
-    height: 818px;
     color: white;
 }
 
 #hero-section-content{
     margin-top: 190px;
-    width: 905px;
+    margin-bottom: 100px;
+    max-width: 905px;
 }
 
 main{
@@ -236,4 +236,115 @@ footer h3{
 
 #footer-author-name{
     color: rgba(141, 186, 242, 1);
+}
+
+@media screen and (max-width: 1439px){
+    .container{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 60px auto auto 315px;
+    }
+
+    header{
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: 100vw;
+    }
+
+    #logo{
+        grid-column: 1 / 2;
+    }
+
+    #hero-section{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    main{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    footer{
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: 100vw;
+    }
+
+    #footer-content{
+        grid-column: 1/ 2;
+    }
+
+    .card-image{
+        width: 26.4vw;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #cards-div{
+        width: 68vw;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #main-title{
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    #main-text{
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 50px;
+    }
+    
+    #hero-section-content{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 75px;
+    }
+
+    #main-anchor{
+        font-size: 16px;
+    }
+
+    .sub-container{
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #hero-section-content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #logo{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    
+    #main-title{
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    #main-text{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 32.5px;
+        margin-top: 7.5px;
+    }
+
+    #main-anchor{
+        font-size: 14px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .sub-container{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
