@@ -113,7 +113,7 @@ main{
 }
 
 #cards-div{
-    width: 980px;
+    width: 800px;
     margin: auto;
     margin-bottom: 165px;
 }
@@ -275,7 +275,7 @@ footer h3{
         grid-column: 1/ 2;
     }
 
-    .card-image{
+    /* .card-image{
         width: 26.4vw;
         background-size: cover;
         background-position: center;
@@ -283,7 +283,7 @@ footer h3{
 
     #cards-div{
         width: 68vw;
-    }
+    } */
 }
 
 @media screen and (max-width: 1000px){
@@ -305,6 +305,35 @@ footer h3{
 
     #search-div button{
         width: 37px;
+    }
+
+    .card-list li, .card-list strong{
+        font-size: 16px;
+    }
+
+    .card-title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .card-content{
+        margin: 30px 20px 30px 30px;
+    }
+
+    #cards-div{
+        width: 450px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image{
+        width: 450px;
+        height: 250px;
+        background-position: top center;
+        
     }
 
     #footer-description p{
@@ -374,6 +403,33 @@ footer h3{
     #search-div input{
         font-size: 14px;
         width: 200px;
+    }
+
+    .card-list li, .card-list strong{
+        font-size: 14px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image{
+        width: 260px;
+        height: 260px;
+        background-size: cover;
+    }
+
+    .card-title{
+        font-size: 20px;
+    }
+
+    .card-content{
+        margin: 20px 15px 20px 15px;
+    }
+
+    #cards-div{
+        width: 260px;
     }
 
     .sub-container{
