@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/702790fde3.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Grand Strategy Games</title>
 </head>
@@ -17,11 +18,16 @@
             <div id="logo" class="sub-container">
                 <h3>Grand Strategy Games</h3>
                 <nav id="navbar">
-                    <ul>
+                    <ul id="navbar-list">
                         <li><a href="#hero-section">Home</a></li>
                         <li><a href="#main">Games</a></li>
                         <li><a href="#footer">Contact</a></li>
                     </ul>
+                    <div id="navbar-hamburguer" onclick="toggleMenu()">
+                        <span class="hamburguer-slice"></span>
+                        <span class="hamburguer-slice"></span>
+                        <span class="hamburguer-slice"></span>
+                    </div>
                 </nav>
             </div>
         </header>

@@ -343,3 +343,12 @@ function objHasString(array, string) {
 }
 
 // console.log(objHasString(objetos, "Total War: Warhammer II"));
+
+/*
+=======HAMBURGUER MENU=========
+*/
+
+function toggleMenu(){
+  let menu = document.getElementById("navbar-list");
+  menu.classList.toggle("visible");
+}
