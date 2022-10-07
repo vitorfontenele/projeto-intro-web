@@ -16,38 +16,38 @@
 
 const titulo1 = "Civilization V";
 const autor1 = "Firaxis Games";
-const preco1 = 45;
+const preco1 = 23.89;
 const lancamento1 = 2010;
 const possuiSelo1 = true;
 const plataformas1 = ["Windows", "macOS", "Linux"];
 
 const titulo2 = "Civilization VI";
 const autor2 = "Firaxis Games";
-const preco2 = 19.35;
+const preco2 = 59.99;
 const lancamento2 = 2016;
 const possuiSelo2 = true;
 const plataformas2 = ["Nintendo Switch", "PlayStation 4", "Android", "Xbox One", "Windows", "iOS", "Linux", "macOS"];
 
 const titulo3 = "Europa Universalis IV";
 const autor3 = "Paradox Interactive";
-const preco3 = 94.99;
+const preco3 = 39.99;
 const lancamento3 = 2013;
 const possuiSelo3 = true;
-const plataformas3 = ["macOS", "Linux", "Windows"];
+const plataformas3 = ["Windows", "macOS", "Linux"];
 
 const titulo4 = "Hearts of Iron IV";
 const autor4 = "Paradox Interactive";
 const preco4 = 23.74;
 const lancamento4 = 2016;
 const possuiSelo4 = true;
-const plataformas4 = ["macOS", "Linux", "Windows"];
+const plataformas4 = ["Windows", "macOS", "Linux"];
 
 const titulo5 = "Total War: Warhammer II";
 const autor5 = "Creative Assembly";
-const preco5 = 252;
+const preco5 = 53.99;
 const lancamento5 = 2017;
 const possuiSelo5 = true;
-const plataformas5 = ["macOS", "Linux", "Windows"];
+const plataformas5 = ["Windows", "macOS", "Linux"];
 
 //----1.3----
 
@@ -186,108 +186,46 @@ for (let objeto of objetosTeste) {
 //----3.1----
 
 //Relatorio, antes
-const printPrevReport = () => {
-  console.log("------ANTES-------");
-
-  console.log("---OBJETO 1---");
-  console.log("titulo:", objetos[0]["titulo"]);
-  console.log("autor:", objetos[0]["autor"]);
-  console.log("preco:", objetos[0]["preco"]);
-  console.log("lancamento:", objetos[0]["lancamento"]);
-  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
-  console.log("plataformas:", objetos[0]["plataformas"]);
-
-  console.log("---OBJETO 2---");
-  console.log("titulo:", objetos[1]["titulo"]);
-  console.log("autor:", objetos[1]["autor"]);
-  console.log("preco:", objetos[1]["preco"]);
-  console.log("lancamento:", objetos[1]["lancamento"]);
-  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
-  console.log("plataformas:", objetos[1]["plataformas"]);
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objetos[2]["titulo"]);
-  console.log("autor:", objetos[2]["autor"]);
-  console.log("preco:", objetos[2]["preco"]);
-  console.log("lancamento:", objetos[2]["lancamento"]);
-  console.log("possuiSelo:", objetos[2]["possuiSelo"]);
-  console.log("plataformas:", objetos[2]["plataformas"]);
-
-  console.log("---OBJETO 4---");
-  console.log("titulo:", objetos[3]["titulo"]);
-  console.log("autor:", objetos[3]["autor"]);
-  console.log("preco:", objetos[3]["preco"]);
-  console.log("lancamento:", objetos[3]["lancamento"]);
-  console.log("possuiSelo:", objetos[3]["possuiSelo"]);
-  console.log("plataformas:", objetos[3]["plataformas"]);
-
-  console.log("---OBJETO 5---");
-  console.log("titulo:", objetos[4]["titulo"]);
-  console.log("autor:", objetos[4]["autor"]);
-  console.log("preco:", objetos[4]["preco"]);
-  console.log("lancamento:", objetos[4]["lancamento"]);
-  console.log("possuiSelo:", objetos[4]["possuiSelo"]);
-  console.log("plataformas:", objetos[4]["plataformas"]);
+const printPrevReport = (obj) => {
+  console.log(obj["titulo"].toUpperCase());
+  console.log("autor:", obj["autor"]);
+  console.log("preco:", obj["preco"]);
+  console.log("lancamento:", obj["lancamento"]);
+  console.log("possuiSelo:", obj["possuiSelo"]);
+  console.log("plataformas:", obj["plataformas"]);
 };
 
-// printPrevReport();
+// printPrevReport(objetos[0]);
+// printPrevReport(objetos[1]);
+// printPrevReport(objetos[2]);
+// printPrevReport(objetos[3]);
+// printPrevReport(objetos[4]);
 
 //Funcao que transforma o array do objeto em string
 function arrValueToStr(obj, key) {
   let arrValue = obj[key];
   let strValue = "";
   for (let element of arrValue) {
-    strValue += `${element},`;
+    strValue += `${element}, `;
   }
-  return strValue.slice(0, -1);
+  return strValue.slice(0, -2);
 }
 
 //Relatorio, depois
-const printPostReport = () => {
-  console.log("--------DEPOIS---------");
-
-  console.log("---OBJETO 1---");
-  console.log("titulo:", objetos[0]["titulo"]);
-  console.log("autor:", objetos[0]["autor"]);
-  console.log("preco:", objetos[0]["preco"]);
-  console.log("lancamento:", objetos[0]["lancamento"]);
-  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[0], "plataformas"));
-
-  console.log("---OBJETO 2---");
-  console.log("titulo:", objetos[1]["titulo"]);
-  console.log("autor:", objetos[1]["autor"]);
-  console.log("preco:", objetos[1]["preco"]);
-  console.log("lancamento:", objetos[1]["lancamento"]);
-  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[1], "plataformas"));
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objetos[2]["titulo"]);
-  console.log("autor:", objetos[2]["autor"]);
-  console.log("preco:", objetos[2]["preco"]);
-  console.log("lancamento:", objetos[2]["lancamento"]);
-  console.log("possuiSelo:", objetos[2]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[2], "plataformas"));
-
-  console.log("---OBJETO 4---");
-  console.log("titulo:", objetos[3]["titulo"]);
-  console.log("autor:", objetos[3]["autor"]);
-  console.log("preco:", objetos[3]["preco"]);
-  console.log("lancamento:", objetos[3]["lancamento"]);
-  console.log("possuiSelo:", objetos[3]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[3], "plataformas"));
-
-  console.log("---OBJETO 5---");
-  console.log("titulo:", objetos[4]["titulo"]);
-  console.log("autor:", objetos[4]["autor"]);
-  console.log("preco:", objetos[4]["preco"]);
-  console.log("lancamento:", objetos[4]["lancamento"]);
-  console.log("possuiSelo:", objetos[4]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[4], "plataformas"));
+const printPostReport = (obj) => {
+  console.log(obj["titulo"].toUpperCase());
+  console.log("autor:", obj["autor"]);
+  console.log("preco:", obj["preco"]);
+  console.log("lancamento:", obj["lancamento"]);
+  console.log("possuiSelo:", obj["possuiSelo"]);
+  console.log("plataformas:", arrValueToStr(obj, "plataformas"));
 };
 
-//printPostReport();
+// printPostReport(objetos[0]);
+// printPostReport(objetos[1]);
+// printPostReport(objetos[2]);
+// printPostReport(objetos[3]);
+// printPostReport(objetos[4]);
 
 //----3.2----
 
@@ -319,11 +257,9 @@ function valuesToStr(obj) {
 }
 
 const printObjsToStr = () => {
-  console.log(valuesToStr(objetos[0]));
-  console.log(valuesToStr(objetos[1]));
-  console.log(valuesToStr(objetos[2]));
-  console.log(valuesToStr(objetos[3]));
-  console.log(valuesToStr(objetos[4]));
+  for (let objeto of objetos){
+    console.log(valuesToStr(objeto));
+  }
 };
 
 //printObjsToStr();
