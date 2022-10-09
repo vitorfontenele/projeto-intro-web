@@ -183,9 +183,10 @@ main{
 }
 
 .card-image{
-    width: 366px;
+    min-width: 270px; 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image-1{
@@ -379,14 +380,10 @@ footer h3{
         width: 83vw;
     }
 
-    /* .card{
-        display: flex;
-        flex-direction: column;
-    } */
-
     .card-image{
         background-position: top center;
-        max-width: 260px;
+        min-width: 200px;
+        max-width: 250px;
     }
 
     #footer-description p{
@@ -502,7 +499,7 @@ footer h3{
     }
 
     .card-image{
-        width: 260px;
+        min-width: 260px;
         height: 260px;
         background-size: cover;
     }
