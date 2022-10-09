@@ -4,60 +4,75 @@
 
 //----1.1----
 
-// Jogos de Estratégia
-// titulo --> string
-// autor --> string
-// preco --> number
-// lancamento --> number
-// possuiSelo --> boolean
-// plataformas --> array (object)
+// Grand Strategy Games
+// title --> string
+// developer --> string
+// price --> number
+// release --> number
+// hasSeal --> boolean
+// platforms --> array (object)
+// properties --> object
 
 //----1.2----
 
-const titulo1 = "Civilization V";
-const autor1 = "Firaxis Games";
-const preco1 = 45;
-const lancamento1 = 2010;
-const possuiSelo1 = true;
-const plataformas1 = ["Windows", "macOS", "Linux"];
+const title1 = "Civilization VI";
+const developer1 = "Firaxis Games";
+const price1 = 59.99;
+const release1 = 2016;
+const hasSeal1 = true;
+const platforms1 = [
+  "Nintendo Switch",
+  "PlayStation 4",
+  "Android",
+  "Xbox One",
+  "Windows",
+  "iOS",
+  "Linux",
+  "macOS",
+];
+const properties1 = { image: "./assets/image-1.png", color: "#FFF2DB" };
 
-const titulo2 = "Civilization VI";
-const autor2 = "Firaxis Games";
-const preco2 = 19.35;
-const lancamento2 = 2016;
-const possuiSelo2 = true;
-const plataformas2 = ["Nintendo Switch", "PlayStation 4", "Android", "Xbox One", "Windows", "iOS", "Linux", "macOS"];
+const title2 = "Civilization V";
+const developer2 = "Firaxis Games";
+const price2 = 23.89;
+const release2 = 2010;
+const hasSeal2 = true;
+const platforms2 = ["Windows", "macOS", "Linux"];
+const properties2 = { image: "./assets/image-2.png", color: "#E3E1E8" };
 
-const titulo3 = "Europa Universalis IV";
-const autor3 = "Paradox Interactive";
-const preco3 = 94.99;
-const lancamento3 = 2013;
-const possuiSelo3 = true;
-const plataformas3 = ["macOS", "Linux", "Windows"];
+const title3 = "Europa Universalis IV";
+const developer3 = "Paradox Interactive";
+const price3 = 39.99;
+const release3 = 2013;
+const hasSeal3 = true;
+const platforms3 = ["Windows", "macOS", "Linux"];
+const properties3 = { image: "./assets/image-3.png", color: "#BDCFE0" };
 
-const titulo4 = "Hearts of Iron IV";
-const autor4 = "Paradox Interactive";
-const preco4 = 23.74;
-const lancamento4 = 2016;
-const possuiSelo4 = true;
-const plataformas4 = ["macOS", "Linux", "Windows"];
+const title4 = "Hearts of Iron IV";
+const developer4 = "Paradox Interactive";
+const price4 = 23.74;
+const release4 = 2016;
+const hasSeal4 = true;
+const platforms4 = ["Windows", "macOS", "Linux"];
+const properties4 = { image: "./assets/image-4.png", color: "#E2DBC5" };
 
-const titulo5 = "Total War: Warhammer II";
-const autor5 = "Creative Assembly";
-const preco5 = 252;
-const lancamento5 = 2017;
-const possuiSelo5 = true;
-const plataformas5 = ["macOS", "Linux", "Windows"];
+const title5 = "Total War: Warhammer II";
+const developer5 = "Creative Assembly";
+const price5 = 53.99;
+const release5 = 2017;
+const hasSeal5 = true;
+const platforms5 = ["Windows", "macOS", "Linux"];
+const properties5 = { image: "./assets/image-5.png", color: "#CCEEFA" };
 
 //----1.3----
 
-const mediaPrecos = (preco1 + preco2 + preco3 + preco4 + preco5) / 5;
-console.log("Média de preços", mediaPrecos);
+const averagePrice = (price1 + price2 + price3 + price4 + price5) / 5;
+console.log("Average price", averagePrice);
 
 //----1.4----
 
-const possuiSelos = possuiSelo1 && possuiSelo2 && possuiSelo3 && possuiSelo4 && possuiSelo5;
-console.log("Todos possuem selos?", possuiSelos);
+const hasSeals = hasSeal1 && hasSeal2 && hasSeal3 && hasSeal4 && hasSeal5;
+console.log("All true?", hasSeals);
 
 //----1.5----
 
@@ -66,51 +81,56 @@ console.log("Todos possuem selos?", possuiSelos);
 //----1.6----
 
 const printAll = () => {
-  console.log("titulo: ", titulo1.toUpperCase());
-  console.log("autor: ", autor1.toUpperCase());
-  console.log("preco: ", preco1);
-  console.log("lancamento: ", lancamento1);
-  console.log("possuiSelo: ", possuiSelo1);
-  console.log("plataformas: ", plataformas1);
+  console.log("title: ", title1.toUpperCase());
+  console.log("developer: ", developer1.toUpperCase());
+  console.log("price: ", price1);
+  console.log("release: ", release1);
+  console.log("hasSeal: ", hasSeal1);
+  console.log("platforms: ", platforms1);
+  console.log("properties: ", properties1);
 
   console.log("=================");
 
-  console.log("titulo: ", titulo2.toUpperCase());
-  console.log("autor: ", autor2.toUpperCase());
-  console.log("preco: ", preco2);
-  console.log("lancamento: ", lancamento2);
-  console.log("possuiSelo: ", possuiSelo2);
-  console.log("plataformas: ", plataformas2);
+  console.log("title: ", title2.toUpperCase());
+  console.log("developer: ", developer2.toUpperCase());
+  console.log("price: ", price2);
+  console.log("release: ", release2);
+  console.log("hasSeal: ", hasSeal2);
+  console.log("platforms: ", platforms2);
+  console.log("properties: ", properties2);
 
   console.log("=================");
 
-  console.log("titulo: ", titulo3.toUpperCase());
-  console.log("autor: ", autor3.toUpperCase());
-  console.log("preco: ", preco3);
-  console.log("lancamento: ", lancamento3);
-  console.log("possuiSelo: ", possuiSelo3);
-  console.log("plataformas: ", plataformas3);
+  console.log("title: ", title3.toUpperCase());
+  console.log("developer: ", developer3.toUpperCase());
+  console.log("price: ", price3);
+  console.log("release: ", release3);
+  console.log("hasSeal: ", hasSeal3);
+  console.log("platforms: ", platforms3);
+  console.log("properties: ", properties3);
 
   console.log("=================");
 
-  console.log("titulo: ", titulo4.toUpperCase());
-  console.log("autor: ", autor4.toUpperCase());
-  console.log("preco: ", preco4);
-  console.log("lancamento: ", lancamento4);
-  console.log("possuiSelo: ", possuiSelo4);
-  console.log("plataformas: ", plataformas4);
+  console.log("title: ", title4.toUpperCase());
+  console.log("developer: ", developer4.toUpperCase());
+  console.log("price: ", price4);
+  console.log("release: ", release4);
+  console.log("hasSeal: ", hasSeal4);
+  console.log("platforms: ", platforms4);
+  console.log("properties: ", properties4);
 
   console.log("=================");
 
-  console.log("titulo: ", titulo5.toUpperCase());
-  console.log("autor: ", autor5.toUpperCase());
-  console.log("preco: ", preco5);
-  console.log("lancamento: ", lancamento5);
-  console.log("possuiSelo: ", possuiSelo5);
-  console.log("plataformas: ", plataformas5);
+  console.log("title: ", title5.toUpperCase());
+  console.log("developer: ", developer5.toUpperCase());
+  console.log("price: ", price5);
+  console.log("release: ", release5);
+  console.log("hasSeal: ", hasSeal5);
+  console.log("platforms: ", platforms5);
+  console.log("properties: ", properties5);
 };
 
-//printAll();
+// printAll();
 
 /*
 =======SEMANA 2=========
@@ -118,64 +138,69 @@ const printAll = () => {
 
 //----2.1----
 
-const objeto1 = {
-  titulo: titulo1,
-  autor: autor1,
-  preco: preco1,
-  lancamento: lancamento1,
-  possuiSelo: possuiSelo1,
-  plataformas: plataformas1,
+const object1 = {
+  title: title1,
+  developer: developer1,
+  price: price1,
+  release: release1,
+  hasSeal: hasSeal1,
+  platforms: platforms1,
+  properties: properties1,
 };
 
-const objeto2 = {
-  titulo: titulo2,
-  autor: autor2,
-  preco: preco2,
-  lancamento: lancamento2,
-  possuiSelo: possuiSelo2,
-  plataformas: plataformas2,
+const object2 = {
+  title: title2,
+  developer: developer2,
+  price: price2,
+  release: release2,
+  hasSeal: hasSeal2,
+  platforms: platforms2,
+  properties: properties2,
 };
 
-const objeto3 = {
-  titulo: titulo3,
-  autor: autor3,
-  preco: preco3,
-  lancamento: lancamento3,
-  possuiSelo: possuiSelo3,
-  plataformas: plataformas3,
+const object3 = {
+  title: title3,
+  developer: developer3,
+  price: price3,
+  release: release3,
+  hasSeal: hasSeal3,
+  platforms: platforms3,
+  properties: properties3,
 };
 
-const objeto4 = {
-  titulo: titulo4,
-  autor: autor4,
-  preco: preco4,
-  lancamento: lancamento4,
-  possuiSelo: possuiSelo4,
-  plataformas: plataformas4,
+const object4 = {
+  title: title4,
+  developer: developer4,
+  price: price4,
+  release: release4,
+  hasSeal: hasSeal4,
+  platforms: platforms4,
+  properties: properties4,
 };
 
-const objeto5 = {
-  titulo: titulo5,
-  autor: autor5,
-  preco: preco5,
-  lancamento: lancamento5,
-  possuiSelo: possuiSelo5,
-  plataformas: plataformas5,
+const object5 = {
+  title: title5,
+  developer: developer5,
+  price: price5,
+  release: release5,
+  hasSeal: hasSeal5,
+  platforms: platforms5,
+  properties: properties5,
 };
 
 //----2.2----
 
-let objetos = [];
+let objects = [];
 
 //----2.3---- + ----2.4---- + ----2.5----
 
-let objetosTeste = [objeto1, objeto2, objeto3, objeto4, objeto5];
+let objectsTest = [object1, object2, object3, object4, object5];
 
-for (let objeto of objetosTeste) {
-  if (objeto.possuiSelo) {
-    objetos.push(objeto);
+for (let object of objectsTest) {
+  if (object.hasSeal) {
+    objects.push(object);
   } else {
-    alert(`O curso ${objeto.titulo} não foi adicionado!`);
+    alert(`O curso ${object.title} não foi adicionado!`);
   }
 }
 
@@ -186,108 +211,48 @@ for (let objeto of objetosTeste) {
 //----3.1----
 
 //Relatorio, antes
-const printPrevReport = () => {
-  console.log("------ANTES-------");
-
-  console.log("---OBJETO 1---");
-  console.log("titulo:", objetos[0]["titulo"]);
-  console.log("autor:", objetos[0]["autor"]);
-  console.log("preco:", objetos[0]["preco"]);
-  console.log("lancamento:", objetos[0]["lancamento"]);
-  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
-  console.log("plataformas:", objetos[0]["plataformas"]);
-
-  console.log("---OBJETO 2---");
-  console.log("titulo:", objetos[1]["titulo"]);
-  console.log("autor:", objetos[1]["autor"]);
-  console.log("preco:", objetos[1]["preco"]);
-  console.log("lancamento:", objetos[1]["lancamento"]);
-  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
-  console.log("plataformas:", objetos[1]["plataformas"]);
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objetos[2]["titulo"]);
-  console.log("autor:", objetos[2]["autor"]);
-  console.log("preco:", objetos[2]["preco"]);
-  console.log("lancamento:", objetos[2]["lancamento"]);
-  console.log("possuiSelo:", objetos[2]["possuiSelo"]);
-  console.log("plataformas:", objetos[2]["plataformas"]);
-
-  console.log("---OBJETO 4---");
-  console.log("titulo:", objetos[3]["titulo"]);
-  console.log("autor:", objetos[3]["autor"]);
-  console.log("preco:", objetos[3]["preco"]);
-  console.log("lancamento:", objetos[3]["lancamento"]);
-  console.log("possuiSelo:", objetos[3]["possuiSelo"]);
-  console.log("plataformas:", objetos[3]["plataformas"]);
-
-  console.log("---OBJETO 5---");
-  console.log("titulo:", objetos[4]["titulo"]);
-  console.log("autor:", objetos[4]["autor"]);
-  console.log("preco:", objetos[4]["preco"]);
-  console.log("lancamento:", objetos[4]["lancamento"]);
-  console.log("possuiSelo:", objetos[4]["possuiSelo"]);
-  console.log("plataformas:", objetos[4]["plataformas"]);
+const printPrevReport = (obj) => {
+  console.log(obj["title"].toUpperCase());
+  console.log("developer:", obj["developer"]);
+  console.log("price:", obj["price"]);
+  console.log("release:", obj["release"]);
+  console.log("hasSeal:", obj["hasSeal"]);
+  console.log("platforms:", obj["platforms"]);
+  console.log("properties:", obj["properties"]);
 };
 
-// printPrevReport();
+// printPrevReport(objects[0]);
+// printPrevReport(objects[1]);
+// printPrevReport(objects[2]);
+// printPrevReport(objects[3]);
+// printPrevReport(objects[4]);
 
 //Funcao que transforma o array do objeto em string
 function arrValueToStr(obj, key) {
   let arrValue = obj[key];
   let strValue = "";
   for (let element of arrValue) {
-    strValue += `${element},`;
+    strValue += `${element}, `;
   }
-  return strValue.slice(0, -1);
+  return strValue.slice(0, -2);
 }
 
 //Relatorio, depois
-const printPostReport = () => {
-  console.log("--------DEPOIS---------");
-
-  console.log("---OBJETO 1---");
-  console.log("titulo:", objetos[0]["titulo"]);
-  console.log("autor:", objetos[0]["autor"]);
-  console.log("preco:", objetos[0]["preco"]);
-  console.log("lancamento:", objetos[0]["lancamento"]);
-  console.log("possuiSelo:", objetos[0]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[0], "plataformas"));
-
-  console.log("---OBJETO 2---");
-  console.log("titulo:", objetos[1]["titulo"]);
-  console.log("autor:", objetos[1]["autor"]);
-  console.log("preco:", objetos[1]["preco"]);
-  console.log("lancamento:", objetos[1]["lancamento"]);
-  console.log("possuiSelo:", objetos[1]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[1], "plataformas"));
-
-  console.log("---OBJETO 3---");
-  console.log("titulo:", objetos[2]["titulo"]);
-  console.log("autor:", objetos[2]["autor"]);
-  console.log("preco:", objetos[2]["preco"]);
-  console.log("lancamento:", objetos[2]["lancamento"]);
-  console.log("possuiSelo:", objetos[2]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[2], "plataformas"));
-
-  console.log("---OBJETO 4---");
-  console.log("titulo:", objetos[3]["titulo"]);
-  console.log("autor:", objetos[3]["autor"]);
-  console.log("preco:", objetos[3]["preco"]);
-  console.log("lancamento:", objetos[3]["lancamento"]);
-  console.log("possuiSelo:", objetos[3]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[3], "plataformas"));
-
-  console.log("---OBJETO 5---");
-  console.log("titulo:", objetos[4]["titulo"]);
-  console.log("autor:", objetos[4]["autor"]);
-  console.log("preco:", objetos[4]["preco"]);
-  console.log("lancamento:", objetos[4]["lancamento"]);
-  console.log("possuiSelo:", objetos[4]["possuiSelo"]);
-  console.log("plataformas:", arrValueToStr(objetos[4], "plataformas"));
+const printPostReport = (obj) => {
+  console.log(obj["title"].toUpperCase());
+  console.log("developer:", obj["developer"]);
+  console.log("price:", obj["price"]);
+  console.log("release:", obj["release"]);
+  console.log("hasSeal:", obj["hasSeal"]);
+  console.log("platforms:", arrValueToStr(obj, "platforms"));
+  console.log("properties:", obj["properties"]);
 };
 
-//printPostReport();
+// printPostReport(objects[0]);
+// printPostReport(objects[1]);
+// printPostReport(objects[2]);
+// printPostReport(objects[3]);
+// printPostReport(objects[4]);
 
 //----3.2----
 
@@ -302,7 +267,7 @@ function printWithLoops(arr) {
 }
 
 const printItems = () => {
-  printWithLoops(objetos);
+  printWithLoops(objects);
 };
 
 //printItems();
@@ -319,11 +284,9 @@ function valuesToStr(obj) {
 }
 
 const printObjsToStr = () => {
-  console.log(valuesToStr(objetos[0]));
-  console.log(valuesToStr(objetos[1]));
-  console.log(valuesToStr(objetos[2]));
-  console.log(valuesToStr(objetos[3]));
-  console.log(valuesToStr(objetos[4]));
+  for (let object of objects) {
+    console.log(valuesToStr(object));
+  }
 };
 
 //printObjsToStr();
@@ -333,13 +296,73 @@ const printObjsToStr = () => {
 //Verificando se algum dos objetos tem uma determinda string
 function objHasString(array, string) {
   for (let obj of array) {
-    for (let key in obj) {
-      if (obj[key] === string) {
-        return obj;
-      }
+    if (obj["title"] === string) {
+      return obj;
     }
   }
-  alert("Nenhum item foi encontrado!");
+  //alert("Nenhum item foi encontrado!");
 }
 
-// console.log(objHasString(objetos, "Total War: Warhammer II"));
+// console.log(objHasString(objects, "Total War: Warhammer II"));
+
+/*
+=======HAMBURGUER MENU=========
+*/
+
+function toggleMenu() {
+  let menu = document.getElementById("navbar-list");
+  menu.classList.toggle("visible");
+}
+
+/*
+=====DOM=====
+*/
+
+function mainSearch() {
+  let inputField = document.getElementById("search-input");
+  let inputName = inputField.value;
+  let object = objHasString(objects, inputName);
+
+  if (!Boolean(object)) {
+    alert("Não foi encontrado um jogo com esse nome!");
+    inputField.value = "";
+    return;
+  }
+
+  let cardsDiv = document.getElementById("cards-div");
+  while (cardsDiv.firstChild) {
+    cardsDiv.removeChild(cardsDiv.lastChild);
+  }
+
+  let resultCard = document.createElement("section");
+  let imageDiv = document.createElement("div");
+  let contentDiv = document.createElement("div");
+  resultCard.classList.add("card");
+  imageDiv.classList.add("card-image");
+  contentDiv.classList.add("card-content");
+  resultCard.appendChild(imageDiv);
+  resultCard.appendChild(contentDiv);
+
+  let cardHeader = document.createElement("h3");
+  let cardList = document.createElement("ul");
+  cardHeader.classList.add("card-title");
+  cardList.classList.add("card-list");
+  contentDiv.appendChild(cardHeader);
+  contentDiv.appendChild(cardList);
+
+  cardHeader.textContent = object["title"];
+  for (let key in object) {
+    if (key == "hasSeal" || key == "properties") {
+      continue;
+    }
+    let cardListItem = document.createElement("li");
+    let cardListItemHeadline = key[0].toUpperCase() + key.slice(1);
+    let value = Array.isArray(object[key]) ? arrValueToStr(object, key) : object[key];
+    cardListItem.innerHTML = `<strong>${cardListItemHeadline}:</strong> ${value}`;
+    cardList.appendChild(cardListItem);
+  }
+  let imageDivBgFilePath = object["properties"]["image"];
+  imageDiv.style.backgroundImage = `url(${imageDivBgFilePath})`;
+  resultCard.style.backgroundColor = object["properties"]["color"];
+  cardsDiv.appendChild(resultCard);
+}
