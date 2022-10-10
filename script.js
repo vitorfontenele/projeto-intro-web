@@ -315,25 +315,25 @@ function toggleMenu() {
 }
 
 /*
-=====DOM=====
+=======SEMANA 6=========
 */
 
-function mainSearch() {
-  let inputField = document.getElementById("search-input");
-  let inputName = inputField.value;
-  let object = objHasString(objects, inputName);
+// Container dos cards
+let cardsDiv = document.getElementById("cards-div");
 
-  if (!Boolean(object)) {
-    alert("Não foi encontrado um jogo com esse nome!");
-    inputField.value = "";
-    return;
+// Funcao que remove os filhos de um elemento
+const removeChilds = (element) => {
+  while (element.firstChild) {
+    element.removeChild(element.lastChild);
   }
+};
 
-  let cardsDiv = document.getElementById("cards-div");
-  while (cardsDiv.firstChild) {
-    cardsDiv.removeChild(cardsDiv.lastChild);
-  }
+// Remocao dos filhos do container dos cards
+removeChilds(cardsDiv);
 
+//Funcao que cria um card
+const createCard = (object) => {
+  // Containers do card
   let resultCard = document.createElement("section");
   let imageDiv = document.createElement("div");
   let contentDiv = document.createElement("div");
@@ -343,6 +343,7 @@ function mainSearch() {
   resultCard.appendChild(imageDiv);
   resultCard.appendChild(contentDiv);
 
+  // Estrutura da div class="card-content"
   let cardHeader = document.createElement("h3");
   let cardList = document.createElement("ul");
   cardHeader.classList.add("card-title");
@@ -350,19 +351,60 @@ function mainSearch() {
   contentDiv.appendChild(cardHeader);
   contentDiv.appendChild(cardList);
 
+  // Titulo
   cardHeader.textContent = object["title"];
-  for (let key in object) {
-    if (key == "hasSeal" || key == "properties") {
-      continue;
-    }
+
+  // Chaves desejadas
+  let keys = Object.keys(object);
+  let undesiredKeys = ["title", "hasSeal", "properties"];
+  let desiredKeys = keys.filter((element) => !undesiredKeys.includes(element));
+
+  // Preenchendo as infos
+  for (let key of desiredKeys) {
     let cardListItem = document.createElement("li");
     let cardListItemHeadline = key[0].toUpperCase() + key.slice(1);
-    let value = Array.isArray(object[key]) ? arrValueToStr(object, key) : object[key];
+    let value = Array.isArray(object[key])
+      ? arrValueToStr(object, key)
+      : object[key];
     cardListItem.innerHTML = `<strong>${cardListItemHeadline}:</strong> ${value}`;
     cardList.appendChild(cardListItem);
   }
+  // Imagem de fundo da image-div e cor do card
   let imageDivBgFilePath = object["properties"]["image"];
   imageDiv.style.backgroundImage = `url(${imageDivBgFilePath})`;
   resultCard.style.backgroundColor = object["properties"]["color"];
+
+  // Concatenacao final
   cardsDiv.appendChild(resultCard);
-}
+};
+
+// Funcao para criar todos os cards (1o carregamento da pagina)
+const createCards = (objects) => {
+  for (let object of objects) {
+    createCard(object);
+  }
+};
+
+// Carregando o conteudo
+createCards(objects);
+
+// Evento de clique para pesquisa
+const mainSearch = () => {
+  // Pegando o valor do input e o objeto correspondente
+  let inputField = document.getElementById("search-input");
+  let inputName = inputField.value;
+  let object = objHasString(objects, inputName);
+
+  // Alert caso o valor do input nao tenha objeto correspondente
+  if (!Boolean(object)) {
+    alert("Não foi encontrado um jogo com esse nome!");
+    inputField.value = "";
+    return;
+  }
+
+  // Remocao dos filhos do container dos cards
+  removeChilds(cardsDiv);
+
+  // Criacao do card correspondente ao objeto
+  createCard(object);
+};
