@@ -89,18 +89,15 @@ header{
     line-height: 33px;
 }
 
-#main-anchor{
-    text-decoration: none;
+#main-button{
+    display: block;
     background-color: #D5C77A;
+    border-width: 0;
     width: 183px;
     height: 56px;
     border-radius: 30px;
-    text-transform: uppercase;
     color: black;
     font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #hero-section{
@@ -343,6 +340,10 @@ footer h3{
         display: block;
     }
 
+    #navbar-list a{
+        font-size: 16px;
+    }
+
     #main-title{
         font-size: 4.8vw;
         line-height: 5vw;
@@ -411,8 +412,12 @@ footer h3{
         margin-bottom: 100px;
     }
 
-    #main-anchor{
+    #main-button{
         font-size: 16px;
+        width: 18.3vw;
+        height: 5.6vw;
+        min-width: 130px;
+        min-height: 40px;
     }
 
     .sub-container{

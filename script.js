@@ -408,3 +408,11 @@ const mainSearch = () => {
   // Criacao do card correspondente ao objeto
   createCard(object);
 };
+
+// Botao de call to action da Hero Section
+const takeToMainSearch = () => {
+  let main = document.getElementById("main");
+  window.scrollTo(0, main.offsetTop);
+  let inputField = document.getElementById("search-input");
+  inputField.focus();
+};
