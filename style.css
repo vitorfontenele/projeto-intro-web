@@ -70,6 +70,18 @@ header{
     margin-left: 30px;
 }
 
+#navbar ul a{
+    transition: all ease 0.2s;
+}
+
+#navbar ul a:hover{
+    color: rgb(156, 205, 248);
+}
+
+#navbar ul a:active{
+    color: rgb(24, 91, 151);
+}
+
 #navbar a{
     text-decoration: none;
     color: white;
@@ -98,6 +110,16 @@ header{
     border-radius: 30px;
     color: black;
     font-weight: 700;
+    transition: all ease 0.2s;
+}
+
+#main-button:hover{
+    cursor: pointer;
+    background-color: #e7e0aaf0;  
+}
+
+#main-button:active{
+    background-color: #d1bf5c;  
 }
 
 #hero-section{
@@ -144,6 +166,10 @@ main{
     color: white;
     width: 45px;
     margin-left: 20px;
+}
+
+#search-div button:hover{
+    cursor: pointer;
 }
 
 #cards-div{
@@ -263,6 +289,15 @@ footer h3{
     text-decoration: none;
     color: white;
     margin-right: 10px;
+    transition: all ease 0.2s;
+}
+
+.contact-link:hover{
+    color: rgb(156, 205, 248);
+}
+
+.contact-link:active{
+    color: rgb(24, 91, 151);
 }
 
 #footer-contact li{
