@@ -14,15 +14,15 @@
 </head>
 <body>
     <div id="container">
-        <header>
-            <div id="logo" class="sub-container">
-                <h3 id="document-title">Grand Strategy Games</h3>
-                <h3 id="GSG"><img src="./assets/fake-logo.svg"></h3>
+        <header id="header">
+            <div id="header-content" class="sub-container">
+                <a href="index.html" id="logo-as-text">Grand Strategy Games</a>
+                <a href="index.html" id="logo-as-image"><img src="./assets/fake-logo.svg"></a>
                 <nav id="navbar">
                     <ul id="navbar-list">
-                        <li><a href="#container">Home</a></li>
-                        <li><a href="#main">Games</a></li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a class="navbar-link" href="#container">Home</a></li>
+                        <li><a class="navbar-link" href="#main">Games</a></li>
+                        <li><a class="navbar-link" href="#footer">Contact</a></li>
                     </ul>
                     <div id="navbar-hamburguer" onclick="toggleMenu()">
                         <span class="hamburguer-slice"></span>
@@ -33,20 +33,23 @@
             </div>
         </header>
         <section id="hero-section" class="sub-container">
-            <div id="hero-section-content">
-                <h1 id="main-title">A collection of the best Grand Strategy Games</h1>
-                <p id="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button type="button" id="main-button" onclick="takeToMainSearch()">Search</button>
+            <div id="hero-content">
+                <h1 id="hero-title">A collection of the best Grand Strategy Games</h1>
+                <p id="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div id="hero-buttons">
+                    <button type="button" id="hero-search-button" class="hero-button" onclick="takeToMainSearch()">Search</button>
+                    <button type="button" id="hero-games-button" class="hero-button" onclick="displayAllGames()">All Games</button>
+                </div>
             </div>
         </section>
         <main id="main">
             <div id="search-div">
                 <input id="search-input" type="text" placeholder="Your search here...">
-                <button onclick="mainSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="search-button" onclick="mainSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div id="cards-div">
-                <section class="card">
-                    <div class="card-image">
+                <section class="card card-color-1">
+                    <div class="card-image image-1">
                         <!-- background-image -->
                     </div>
                     <div class="card-content">
@@ -63,13 +66,13 @@
         </main>
         <footer id="footer">
             <div id="footer-content" class="sub-container">
-                <div id="footer-description">
+                <div id="project-description">
                     <h3>This project</h3>
                     <p>This project has no comercial purposes and was developed as a practice of many Web-Dev concepts, such as HTML, CSS and Javascript.</p>
                 </div>
-                <div id="footer-author">
-                    <h3>Created by <span id="footer-author-name">Vitor Fontenele</span></h3>
-                    <ul id="footer-contact">
+                <div id="project-author">
+                    <h3>Created by <span id="project-author-name">Vitor Fontenele</span></h3>
+                    <ul id="project-author-contact">
                         <li><a class="contact-link" href="https://github.com/vitorfontenele" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                         <li><a class="contact-link" href="https://www.linkedin.com/in/vitor-fontenele/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>

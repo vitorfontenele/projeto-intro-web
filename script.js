@@ -409,10 +409,18 @@ const mainSearch = () => {
   createCard(object);
 };
 
-// Botao de call to action da Hero Section
+// Botoes da Hero Section
+let main = document.getElementById("main");
+let inputField = document.getElementById("search-input");
+
 const takeToMainSearch = () => {
-  let main = document.getElementById("main");
   window.scrollTo(0, main.offsetTop);
-  let inputField = document.getElementById("search-input");
   inputField.focus();
+};
+
+const displayAllGames = () => {
+  window.scrollTo(0, main.offsetTop);
+  removeChilds(cardsDiv);
+  createCards(objects);
+  inputField.value = "";
 };
