@@ -41,6 +41,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1440px 1fr;
     position: sticky;
+    z-index: 10;
     top: 0;
 }
 
