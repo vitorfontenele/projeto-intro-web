@@ -231,6 +231,7 @@ body{
     margin-bottom: 60px;
     animation-name: FadeIn;
     animation-duration: 2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card-color-1{
