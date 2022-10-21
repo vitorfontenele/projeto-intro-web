@@ -81,8 +81,8 @@ console.log("All true?", hasSeals);
 //----1.6----
 
 const printAll = () => {
-  console.log("title: ", title1.toUpperCase());
-  console.log("developer: ", developer1.toUpperCase());
+  console.log(title1.toUpperCase());
+  console.log("developer: ", developer1);
   console.log("price: ", price1);
   console.log("release: ", release1);
   console.log("hasSeal: ", hasSeal1);
@@ -91,8 +91,8 @@ const printAll = () => {
 
   console.log("=================");
 
-  console.log("title: ", title2.toUpperCase());
-  console.log("developer: ", developer2.toUpperCase());
+  console.log(title2.toUpperCase());
+  console.log("developer: ", developer2);
   console.log("price: ", price2);
   console.log("release: ", release2);
   console.log("hasSeal: ", hasSeal2);
@@ -101,8 +101,8 @@ const printAll = () => {
 
   console.log("=================");
 
-  console.log("title: ", title3.toUpperCase());
-  console.log("developer: ", developer3.toUpperCase());
+  console.log(title3.toUpperCase());
+  console.log("developer: ", developer3);
   console.log("price: ", price3);
   console.log("release: ", release3);
   console.log("hasSeal: ", hasSeal3);
@@ -111,8 +111,8 @@ const printAll = () => {
 
   console.log("=================");
 
-  console.log("title: ", title4.toUpperCase());
-  console.log("developer: ", developer4.toUpperCase());
+  console.log(title4.toUpperCase());
+  console.log("developer: ", developer4);
   console.log("price: ", price4);
   console.log("release: ", release4);
   console.log("hasSeal: ", hasSeal4);
@@ -121,8 +121,8 @@ const printAll = () => {
 
   console.log("=================");
 
-  console.log("title: ", title5.toUpperCase());
-  console.log("developer: ", developer5.toUpperCase());
+  console.log(title5.toUpperCase());
+  console.log("developer: ", developer5);
   console.log("price: ", price5);
   console.log("release: ", release5);
   console.log("hasSeal: ", hasSeal5);
@@ -130,7 +130,7 @@ const printAll = () => {
   console.log("properties: ", properties5);
 };
 
-// printAll();
+printAll();
 
 /*
 =======SEMANA 2=========
@@ -296,7 +296,7 @@ const printObjsToStr = () => {
 //Verificando se algum dos objetos tem uma determinda string
 function objHasString(array, string) {
   for (let obj of array) {
-    if (obj["title"] === string) {
+    if (obj["title"].toLowerCase() === string.toLowerCase()) {
       return obj;
     }
   }

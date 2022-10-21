@@ -6,6 +6,15 @@
     font-size: 20px;
 }
 
+@keyframes FadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -101,12 +110,15 @@ body{
     font-size: 48px;
     font-weight: 800;
     line-height: 56px;
+    animation-name: FadeIn;
+    animation-duration: 1s;
 }
 
 #hero-text{
     margin-top: 25px;
     margin-bottom: 75px;
     line-height: 33px;
+    max-width: 80%;
 }
 
 #hero-buttons{
@@ -217,6 +229,8 @@ body{
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 60px;
+    animation-name: FadeIn;
+    animation-duration: 2s;
 }
 
 .card-color-1{
@@ -377,7 +391,7 @@ body{
         font-size: 16px;
         line-height: 23px;
         margin-bottom: 50px;
-    }
+    }    
 
     .hero-button{
         font-size: 16px;
@@ -385,6 +399,10 @@ body{
         height: 5.6vw;
         min-width: 130px;
         min-height: 40px;
+    }
+
+    #search-div{
+        margin-top: 60px;
     }
 
     #search-input{
@@ -398,6 +416,11 @@ body{
 
     #cards-div{
         width: 83vw;
+        margin-bottom: 135px;
+    }
+
+    .card{
+        margin-bottom: 40px;
     }
 
     .card-list > li, .card-list > li > strong{
