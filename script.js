@@ -397,6 +397,10 @@ const mainSearch = () => {
 
   // Alert caso o valor do input nao tenha objeto correspondente
   if (!Boolean(object)) {
+    if (inputName == "") {
+      alert("Digite algo primeiro!");
+      return;
+    }
     alert("Não foi encontrado um jogo com esse nome!");
     inputField.value = "";
     return;
