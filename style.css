@@ -205,6 +205,11 @@ body{
     width: 450px;
 }
 
+#search-input:focus{
+    outline: none;
+    border: 2px solid rgb(24, 91, 151);
+}
+
 #search-button{
     padding: 5px;
     border-radius: 10px;
@@ -217,6 +222,11 @@ body{
 
 #search-button:hover{
     cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#search-button:active{
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #cards-div{
