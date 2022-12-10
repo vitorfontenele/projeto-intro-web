@@ -24,7 +24,6 @@
     <li><a href="#requisitos">Requisitos</a></li>
     <li><a href="#utilização">Utilização</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contribuindo">Contribuindo</a></li>
     <li><a href="#licença">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#contribuições">Contribuições</a></li>
@@ -102,22 +101,6 @@ O projeto consiste numa página simples, em que é possível fazer uma busca por
 - [x] Deploy no Github Pages
 
 Veja [open issues](https://github.com/vitorfontenele/projeto-intro-web/issues) para modificações propostas (e issues conhecidos).
-
-<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
-
-<!-- CONTRIBUINDO -->
-## Contribuindo
-
-Contribuições são o que tornam a comunidade open-source um lugar incrível de aprendizado, inspiração e criação. Quaisquer contribuições serão muito apreciadas.
-
-Se você tiver sugestões que melhorariam este projeto, por favor faça um fork do repositório e crie um pull request. Você também pode simplesmente abrir um issue com a tag "enhancement".
-Não se esqueça de dar uma estrela para o projeto! Mais uma vez, obrigado!
-
-1. Faça um Fork do Projeto
-2. Crie uma branch para as modificações que você deseja propor (`git checkout -b feature/mudanca-incrivel`)
-3. Faça um Commit das suas alterações (`git commit -m 'Adicionar uma mudança incrível'`)
-4. Faça um Push para a Branch que você criou (`git push origin feature/mudanca-incrivel`)
-5. Abra um Pull Request
 
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
