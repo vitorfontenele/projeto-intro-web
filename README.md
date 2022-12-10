@@ -1,31 +1,71 @@
-# Projeto de Introdução ao desenvolvimento web
+<a name="readme-top"></a>
 
-Esse é o projeto de introdução aos fundamentos do desenvolvimento Web. Aqui, vamos praticar a estrutura do que faremos pelo curso todo. O objetivo é construir uma página estilizada, e com **lista** e **busca** utilizando manipulação de DOM, praticando o conteúdo do módulo com JS:
+<div align="center">
+  <a href="https://github.com/vitorfontenele/projeto-intro-web">
+    <img src="assets/fake-logo.svg" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">projeto-intro-web</h3>
+  <a href="https://vitorfontenele.github.io/projeto-intro-web/">https://vitorfontenele.github.io/projeto-intro-web/</a>
+</div>
 
-- Variáveis
-- Operadores
-- Strings
-- Arrays
-- Objetos
-- Condicionais
-- Laços
-- Funções
-- Funções de Array
-- HTML e CSS
-- Flex e Grid
-- DOM e responsividade
+<!-- Conteúdo -->
+<details>
+  <summary>Conteúdo</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-com">Feito com</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#instalação">Instalação</a>
+    </li>
+    <li><a href="#requisitos">Requisitos</a></li>
+    <li><a href="#utilização">Utilização</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contribuindo">Contribuindo</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#contribuições">Contribuições</a></li>
+  </ol>
+</details>
 
-## Enunciado
 
-A página consiste em um HTML, ligado a um ou mais arquivos CSS, e um ou mais arquivos JS (recomendamos apenas um de cada, no entanto). O objetivo é conseguir criar uma página estática, depois estilizada, e por fim, dinâmica. A página vai catalogar (ou listar) itens que você escolher, e deve possuir um sistema simples de busca, que recebe um texto, e procura por nomes/títulos que correspondam a este texto.
+<!-- SOBRE O PROJETO -->
+## Sobre o projeto
+
+Este projeto tem como objetivo a construção de uma página voltada para a prática dos fundamentos básicos do Desenvolvimento Web. A ideia é construir uma página estilizada, com elementos listados e com um mecanismo de busca - tudo isso através de manipulação do DOM com o uso de Javascript Vanilla.
+
+Este projeto foi o primeiro realizado no bootcamp da Labenu. A temática escolhida foi uma página sobre Jogos de Estratégia (do gênero *Grand Strategy Games*).
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+### Feito com
+
+* [![HTML][html-shield]][html-url]
+* [![CSS][css-shield]][css-url]
+* [![Javascript][javascript-shield]][javascript-url]
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
 
-[Exemplo](https://user-images.githubusercontent.com/11279432/180304632-97d6705d-100c-4272-8255-8aae19813700.mov)
+<!-- INSTALAÇÃO -->
+## Instalação
 
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/vitorfontenele/projeto-intro-web.git
+   ```
+2. Para executar o projeto em modo de desenvolvimento, basta abrir o arquivo `index.html` no seu navegador.
 
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
-### Lista de requisitos
+<!-- REQUISITOS-->
+## Requisitos
+
+O projeto possui os seguintes requisitos propostos no bootcamp da Labenu:
 
 - [ ]  Tela de listagem com título
 - [ ]  Cabeçalho na página
@@ -43,20 +83,76 @@ A página consiste em um HTML, ligado a um ou mais arquivos CSS, e um ou mais ar
 - [ ]  Utilização de Grid ou Flex para estilizar
 - [ ]  Atenção ao padrão de estilização enviado
 
-### Instruções de entrega
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-intro-web`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- Execute o fluxo de entrega do git. **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Evite fazer as alterações direto na branch ```main```
-    <details>
-       <summary>Dúvidas sobre o Git & Github?</summary>
-       <p>Adiciomos um vídeo explicando o <strong>processo de entrega</strong> [do fork ao pull request] no Material Assincrono da <a href="https://classroom.google.com/w/NTM0NjA2NDg3MjIx/tc/NTM2NDg5NTQyODg4">A005 - Git e Github</a>. Esse vídeo também exemplifica situações que podem acontecer durante o fluxo de utilização do Git.</p>
-    </details>
-- Entregue o **link do repo** no [Formulário de entrega](https://forms.gle/Q1mXTJFxwVUgUnrZA).
+<!-- UTILIZAÇÃO -->
+## Utilização
 
-**Opcional**: Tente utilizar o **Github pages** para fazer o deploy do seu projeto.
+O projeto consiste numa página simples, em que é possível fazer uma busca por nome de jogos através de um input. A manipulação do DOM é feita via Javascript Vanilla. É uma página que pode servir como template para projetos futuros, pensando especialmente no reaproveitamento do seu layout básico.
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Criação do layout da página no Figma
+- [x] Desenvolvimento do código HTML
+- [x] Implementação da manipulação do DOM com JS Vanilla
+- [x] Estilização e tratamento da responsividade
+- [x] Deploy no Github Pages
+
+Veja [open issues](https://github.com/vitorfontenele/projeto-intro-web/issues) para modificações propostas (e issues conhecidos).
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- CONTRIBUINDO -->
+## Contribuindo
+
+Contribuições são o que tornam a comunidade open-source um lugar incrível de aprendizado, inspiração e criação. Quaisquer contribuições serão muito apreciadas.
+
+Se você tiver sugestões que melhorariam este projeto, por favor faça um fork do repositório e crie um pull request. Você também pode simplesmente abrir um issue com a tag "enhancement".
+Não se esqueça de dar uma estrela para o projeto! Mais uma vez, obrigado!
+
+1. Faça um Fork do Projeto
+2. Crie uma branch para as modificações que você deseja propor (`git checkout -b feature/mudanca-incrivel`)
+3. Faça um Commit das suas alterações (`git commit -m 'Adicionar uma mudança incrível'`)
+4. Faça um Push para a Branch que você criou (`git push origin feature/mudanca-incrivel`)
+5. Abra um Pull Request
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- LICENSE -->
+## Licença
+
+Distribuído sob a MIT License. Veja `LICENSE.txt` para mais informações.
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- CONTATO -->
+## Contato
+
+[![Github][github-shield]][github-url][![Linkedin][linkedin-shield]][linkedin-url]
+
+Link do Projeto: [https://github.com/vitorfontenele/projeto-intro-web](https://github.com/vitorfontenele/projeto-intro-web)
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- CONTRIBUIÇÕES -->
+## Contribuições
+
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com/)
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://www.linkedin.com/in/vitor-fontenele/
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/vitorfontenele
+[html-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[html-url]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
+[css-shield]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[css-url]: https://developer.mozilla.org/pt-BR/docs/Web/CSS
+[javascript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[javascript-url]: https://www.javascript.com/
